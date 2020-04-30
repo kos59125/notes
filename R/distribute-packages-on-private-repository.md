@@ -140,7 +140,7 @@ install.packages("PKG", filters = list(version_filter("1.0")), repos = ...)
 
 ```r
 major_version_1_filter <- function(available) {
-    available[grep("^1.", available[, "Version"]), , drop = FALSE]
+    available[grep("^1\\.", available[, "Version"]), , drop = FALSE]
 }
 install.packages("PKG", filters = list(major_version_1_filter, "duplicates"), repos = ...)
 ```
